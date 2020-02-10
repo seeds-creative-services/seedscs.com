@@ -4,7 +4,6 @@ const config = { env: process.env.NODE_ENV || 'development', paths: {} }
 
 config.paths.src = { css: `assets/src/css`, js: `assets/src/js` }
 config.paths.dist = { css: `assets/dist/css`, js: `assets/dist/js` }
-config.paths.blocks = `../../plugins/seedscs-blocks/blocks`
 
 const tasks = {
 
