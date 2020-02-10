@@ -4,19 +4,19 @@ return array(
 
     "name" => array(
 
-        "singular" => "Location",
+        "singular" => "Project",
 
-        "multiple" => "Locations"
+        "multiple" => "Projects"
 
     ),
 
-    "slug" => "locations",
+    "slug" => "projects",
 
-    "icon" => "f5a0",
+    "icon" => "f135",
 
     "glance" => true,
 
-    "public" => false,
+    "public" => true,
 
     "show" => array(
 
@@ -44,7 +44,7 @@ return array(
             $post_type = basename(__FILE__, ".php");
 
             $screen = get_current_screen();
-            if($post_type == $screen->post_type) $title = "Enter location name";
+            if($post_type == $screen->post_type) $title = "Enter project name";
             return $title;
 
         });
@@ -58,15 +58,15 @@ return array(
         add_action('add_meta_boxes', function() {
 
             add_meta_box(
-                "location_contact_details",
-                "Location Details",
-                "render_location_contact_details",
-                "locations",
+                "project_details",
+                "Project Details",
+                "render_project_details",
+                "projects",
                 "normal",
                 "high"
             );
 
-            function render_location_contact_details() {
+            function render_project_details() {
 
                 global $post;
 
@@ -172,7 +172,7 @@ return array(
                         return $post_id;
 
                     $previous_meta = get_post_meta($post_id, "{$post_type}_fields", TRUE);
-                    $current_meta  = $_POST['{$post_type}_fields'];
+                    $current_meta  = $_POST["{$post_type}_fields"];
 
                     if($current_meta && $current_meta !== $previous_meta)
                         update_post_meta($post_id, "{$post_type}_fields", $current_meta);
