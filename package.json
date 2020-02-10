@@ -10,7 +10,11 @@
   "keywords": [],
   "author": "Seeds Creative Services, LLC.",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "@fortawesome/fontawesome-pro": "^5.12.1",
+    "jquery": "^3.4.1",
+    "scrollmagic": "^2.0.7"
+  },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^1.2.0",
     "autoprefixer": "^9.6.0",
