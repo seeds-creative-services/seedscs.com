@@ -106,4 +106,4 @@ foreach(get_theme_mods() as $theme_mod => $value) {
 </head>
 <body>
 
-<?php include_once("layout/header.php"); ?>
+<?php get_template_part('template-parts/header'); ?>

@@ -1,4 +1,4 @@
-<?php include_once("layout/footer.php"); ?>
+<?php get_template_part('template-parts/footer'); ?>
 
 <!-- Vendor Scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
