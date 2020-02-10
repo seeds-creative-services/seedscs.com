@@ -98,10 +98,10 @@ foreach(get_theme_mods() as $theme_mod => $value) {
     <? } ?>
 
     <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/29f0ff1eb5.js" crossorigin="anonymous"></script>
+    <script src="<?php echo get_stylesheet_directory_uri(); ?>/node_modules/@fortawesome/fontawesome-pro/js/all.js"></script>
 
     <!-- Child Theme Styles -->
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . "/assets/dist/css/styles.css" ?>">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/dist/css/styles.css">
 
 </head>
 <body>
