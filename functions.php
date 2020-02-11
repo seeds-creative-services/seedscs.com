@@ -3,18 +3,14 @@
 /** Exit if accessed directly. */
 if(!defined('ABSPATH')) exit;
 
-/** Get the parent theme directories. */
-$theme_template = wp_get_theme()->template;
-$theme_template_dir = get_theme_root() . "/{$theme_template}";
-
 /** Include WordPress plugin functions. */
 include_once(ABSPATH . 'wp-admin/includes/plugin.php');
 
 /** Include SEEDS classes. */
-include_once("{$theme_template_dir}/classes/admin.php");
-include_once("{$theme_template_dir}/classes/login.php");
-include_once("{$theme_template_dir}/classes/theme.php");
-include_once("{$theme_template_dir}/classes/blocks.php");
+include_once(get_theme_root()."/".wp_get_theme()->template."/classes/admin.php");
+include_once(get_theme_root()."/".wp_get_theme()->template."/classes/login.php");
+include_once(get_theme_root()."/".wp_get_theme()->template."/classes/theme.php");
+include_once(get_theme_root()."/".wp_get_theme()->template."/classes/blocks.php");
 
 /** Init classes. */
 $Admin = new SEEDS\Admin;
